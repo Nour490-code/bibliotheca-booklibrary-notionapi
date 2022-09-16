@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliotheca Books</title>
+</head>
+<body>
+    <div class="container">
+        <h1>My books</h1>
+        <%books.forEach( book => {%>
+            <div class="book">
+                <h2><%=book.name%></h2>
+                <h4><%=book.author%></h4>
+                <p>Call Number: <%=book.code%></p>
+                <p>Date: <%=book.date%></p>
+                <p>Read Till: <%=book.readTill%></p>
+            </div>
+        <%})%>
+    </div>
+</body>
+</html>
