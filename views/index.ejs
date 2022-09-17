@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>Bibliotheca Books</title>
 </head>
-<body>
-    <div class="container">
-        <h1>My books</h1>
+<body class="bg-light bg-gradient">
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+        <div class="container-md">
+            <h1 class="navbar-text text-light">My Books</h1>
+        </div>
+    </nav>
+    <div class="container-sm d-flex flex-row flex-wrap" style="margin-top:3rem ; justify-content:center;">
         <%books.forEach( book => {%>
-            <div class="book">
-                <h2><%=book.name%></h2>
-                <h4><%=book.author%></h4>
-                <p>Call Number: <%=book.code%></p>
-                <p>Date: <%=book.date%></p>
-                <p>Read Till: <%=book.readTill%></p>
-            </div>
+            <div class="card h-auto shadow" style="width: 18rem; margin: 0.5rem;">
+                <div class="card-body">
+                    <h2 class="card-title"><%=book.name%></h2>
+                    <h4><%=book.author%></h4>
+                    <p class="card-text">Call Number: <%=book.code%></p>
+                    <p class="card-text">Date: <%=book.date%></p>
+                    <p class="card-text">Read Till: <%=book.readTill%></p>
+                </div>
+             </div>
         <%})%>
     </div>
 </body>
